@@ -11,6 +11,7 @@ import UIKit
 class ReposViewController: UIViewController {
 
     let reposdataprovider = ReposDataProvider()
+    let cellIdentifier = "cellIdentifier"
     
     let tableview: UITableView = {
         let tv = UITableView(frame: .zero)
@@ -25,6 +26,9 @@ class ReposViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableview.delegate = self
+        tableview.dataSource = self
+        
         view.addSubview(tableview)
         tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableview.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -33,15 +37,16 @@ class ReposViewController: UIViewController {
         
         
         
-        
-        
         reloadTable()
+        
+        tableview.register(ReposTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
         
     }
     
     func reloadTable() {
-        reposdataprovider.getRepos { (error) in
-            if error == nil{
+        reposdataprovider.getRepos { (success) in
+            if success{
                 self.tableview.reloadData()
             }
         }
@@ -63,8 +68,14 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReposTableViewCell else {return UITableViewCell()}
+        cell.setupCell(item: reposdataprovider.arrayRepos[indexPath.row])
+        return cell
         
-        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     

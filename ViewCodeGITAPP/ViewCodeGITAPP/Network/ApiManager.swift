@@ -11,7 +11,7 @@ import Alamofire
 
 class ApiManager{
 
-func getAPI(completion: @escaping (Repos?, Error?) -> Void){
+func getAPI(completion: @escaping (Repos?, Bool) -> Void){
     
 let stringUrl: String = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
     
@@ -25,15 +25,15 @@ let stringUrl: String = "https://api.github.com/search/repositories?q=language:s
                 let encoder = JSONDecoder()
                 encoder.keyDecodingStrategy = .convertFromSnakeCase
                 let json = try encoder.decode(Repos.self, from: data)
-                completion(json, nil)
+                completion(json, true)
                 
             }catch{
-                completion(nil, NSError())
+                completion(nil, false)
             }
             
             
         }else{
-            completion(nil, NSError())
+            completion(nil, false)
         }
     }
     
