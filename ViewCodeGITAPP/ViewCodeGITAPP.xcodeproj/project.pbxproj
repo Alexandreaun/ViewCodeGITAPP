@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC0CEB242362737B00AA14D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB232362737B00AA14D1 /* AppDelegate.swift */; };
+		AC0CEB262362737B00AA14D1 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB252362737B00AA14D1 /* ReposViewController.swift */; };
+		AC0CEB2B2362737D00AA14D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0CEB2A2362737D00AA14D1 /* Assets.xcassets */; };
+		AC0CEB2E2362737D00AA14D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0CEB2C2362737D00AA14D1 /* LaunchScreen.storyboard */; };
+		AC0CEB3A2362759300AA14D1 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB392362759300AA14D1 /* ApiManager.swift */; };
+		AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3B236278F400AA14D1 /* Repos.swift */; };
+		AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */; };
+		AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */; };
+		EABA2AD5B5ACD2DB66A3B764 /* Pods_ViewCodeGITAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48890E7FE78DF09D5E14ACE6 /* Pods_ViewCodeGITAPP.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24B7FF22512159E1FEB08BEC /* Pods-ViewCodeGITAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeGITAPP.debug.xcconfig"; path = "Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		48890E7FE78DF09D5E14ACE6 /* Pods_ViewCodeGITAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewCodeGITAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0CEB202362737B00AA14D1 /* ViewCodeGITAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewCodeGITAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0CEB232362737B00AA14D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC0CEB252362737B00AA14D1 /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		AC0CEB2A2362737D00AA14D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC0CEB2D2362737D00AA14D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC0CEB2F2362737D00AA14D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC0CEB392362759300AA14D1 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		AC0CEB3B236278F400AA14D1 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
+		AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDataProvider.swift; sourceTree = "<group>"; };
+		AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		E470A3C4A46B72D66340E937 /* Pods-ViewCodeGITAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeGITAPP.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC0CEB1D2362737B00AA14D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EABA2AD5B5ACD2DB66A3B764 /* Pods_ViewCodeGITAPP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		250DEAE2B53772622ABE10A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48890E7FE78DF09D5E14ACE6 /* Pods_ViewCodeGITAPP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC0CEB172362737B00AA14D1 = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB222362737B00AA14D1 /* ViewCodeGITAPP */,
+				AC0CEB212362737B00AA14D1 /* Products */,
+				D423A3DDD7529E90DECE0C22 /* Pods */,
+				250DEAE2B53772622ABE10A8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC0CEB212362737B00AA14D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB202362737B00AA14D1 /* ViewCodeGITAPP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC0CEB222362737B00AA14D1 /* ViewCodeGITAPP */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB382362754F00AA14D1 /* DataProvider */,
+				AC0CEB372362754600AA14D1 /* Network */,
+				AC0CEB362362754000AA14D1 /* Model */,
+				AC0CEB352362753900AA14D1 /* View */,
+				AC0CEB232362737B00AA14D1 /* AppDelegate.swift */,
+				AC0CEB2A2362737D00AA14D1 /* Assets.xcassets */,
+				AC0CEB2C2362737D00AA14D1 /* LaunchScreen.storyboard */,
+				AC0CEB2F2362737D00AA14D1 /* Info.plist */,
+			);
+			path = ViewCodeGITAPP;
+			sourceTree = "<group>";
+		};
+		AC0CEB352362753900AA14D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB3F2362871F00AA14D1 /* Cell */,
+				AC0CEB252362737B00AA14D1 /* ReposViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC0CEB362362754000AA14D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB3B236278F400AA14D1 /* Repos.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC0CEB372362754600AA14D1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB392362759300AA14D1 /* ApiManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AC0CEB382362754F00AA14D1 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		AC0CEB3F2362871F00AA14D1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D423A3DDD7529E90DECE0C22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24B7FF22512159E1FEB08BEC /* Pods-ViewCodeGITAPP.debug.xcconfig */,
+				E470A3C4A46B72D66340E937 /* Pods-ViewCodeGITAPP.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC0CEB1F2362737B00AA14D1 /* ViewCodeGITAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC0CEB322362737D00AA14D1 /* Build configuration list for PBXNativeTarget "ViewCodeGITAPP" */;
+			buildPhases = (
+				98ACB28BD7BB182DFE0A0489 /* [CP] Check Pods Manifest.lock */,
+				AC0CEB1C2362737B00AA14D1 /* Sources */,
+				AC0CEB1D2362737B00AA14D1 /* Frameworks */,
+				AC0CEB1E2362737B00AA14D1 /* Resources */,
+				D852A8811EF1457321F7000C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViewCodeGITAPP;
+			productName = ViewCodeGITAPP;
+			productReference = AC0CEB202362737B00AA14D1 /* ViewCodeGITAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC0CEB182362737B00AA14D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = AleAun;
+				TargetAttributes = {
+					AC0CEB1F2362737B00AA14D1 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = AC0CEB1B2362737B00AA14D1 /* Build configuration list for PBXProject "ViewCodeGITAPP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC0CEB172362737B00AA14D1;
+			productRefGroup = AC0CEB212362737B00AA14D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC0CEB1F2362737B00AA14D1 /* ViewCodeGITAPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC0CEB1E2362737B00AA14D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC0CEB2E2362737D00AA14D1 /* LaunchScreen.storyboard in Resources */,
+				AC0CEB2B2362737D00AA14D1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98ACB28BD7BB182DFE0A0489 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViewCodeGITAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D852A8811EF1457321F7000C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC0CEB1C2362737B00AA14D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC0CEB262362737B00AA14D1 /* ReposViewController.swift in Sources */,
+				AC0CEB3A2362759300AA14D1 /* ApiManager.swift in Sources */,
+				AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */,
+				AC0CEB242362737B00AA14D1 /* AppDelegate.swift in Sources */,
+				AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */,
+				AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC0CEB2C2362737D00AA14D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC0CEB2D2362737D00AA14D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC0CEB302362737D00AA14D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC0CEB312362737D00AA14D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC0CEB332362737D00AA14D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24B7FF22512159E1FEB08BEC /* Pods-ViewCodeGITAPP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VXABSG45G;
+				INFOPLIST_FILE = ViewCodeGITAPP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developer.ale.ViewCodeGITAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AC0CEB342362737D00AA14D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E470A3C4A46B72D66340E937 /* Pods-ViewCodeGITAPP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VXABSG45G;
+				INFOPLIST_FILE = ViewCodeGITAPP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developer.ale.ViewCodeGITAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC0CEB1B2362737B00AA14D1 /* Build configuration list for PBXProject "ViewCodeGITAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC0CEB302362737D00AA14D1 /* Debug */,
+				AC0CEB312362737D00AA14D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC0CEB322362737D00AA14D1 /* Build configuration list for PBXNativeTarget "ViewCodeGITAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC0CEB332362737D00AA14D1 /* Debug */,
+				AC0CEB342362737D00AA14D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC0CEB182362737B00AA14D1 /* Project object */;
+}
