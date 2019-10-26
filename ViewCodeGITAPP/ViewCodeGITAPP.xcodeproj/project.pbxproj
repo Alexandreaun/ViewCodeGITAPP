@@ -15,6 +15,7 @@
 		AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3B236278F400AA14D1 /* Repos.swift */; };
 		AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */; };
 		AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */; };
+		ACF9316C2364DBD200D2668B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF9316B2364DBD200D2668B /* UIImageExtension.swift */; };
 		EABA2AD5B5ACD2DB66A3B764 /* Pods_ViewCodeGITAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48890E7FE78DF09D5E14ACE6 /* Pods_ViewCodeGITAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		AC0CEB3B236278F400AA14D1 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDataProvider.swift; sourceTree = "<group>"; };
 		AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		ACF9316B2364DBD200D2668B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E470A3C4A46B72D66340E937 /* Pods-ViewCodeGITAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeGITAPP.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		AC0CEB222362737B00AA14D1 /* ViewCodeGITAPP */ = {
 			isa = PBXGroup;
 			children = (
+				ACF9316A2364DBAE00D2668B /* Extensions */,
 				AC0CEB382362754F00AA14D1 /* DataProvider */,
 				AC0CEB372362754600AA14D1 /* Network */,
 				AC0CEB362362754000AA14D1 /* Model */,
@@ -126,6 +129,14 @@
 				AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		ACF9316A2364DBAE00D2668B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACF9316B2364DBD200D2668B /* UIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D423A3DDD7529E90DECE0C22 /* Pods */ = {
@@ -253,6 +264,7 @@
 			files = (
 				AC0CEB262362737B00AA14D1 /* ReposViewController.swift in Sources */,
 				AC0CEB3A2362759300AA14D1 /* ApiManager.swift in Sources */,
+				ACF9316C2364DBD200D2668B /* UIImageExtension.swift in Sources */,
 				AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */,
 				AC0CEB242362737B00AA14D1 /* AppDelegate.swift in Sources */,
 				AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */,

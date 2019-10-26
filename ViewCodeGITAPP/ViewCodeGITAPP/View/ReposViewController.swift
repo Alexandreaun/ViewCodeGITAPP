@@ -15,7 +15,6 @@ class ReposViewController: UIViewController {
     
     let tableview: UITableView = {
         let tv = UITableView(frame: .zero)
-        tv.backgroundColor = .gray
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
         
@@ -29,19 +28,23 @@ class ReposViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
         
+        navTitle()
+        
         view.addSubview(tableview)
         tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableview.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableview.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        
-        
-        reloadTable()
-        
         tableview.register(ReposTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        reloadTable()
+
         
-        
+    }
+    
+    func navTitle(){
+        navigationItem.title = "Repos Git"
+
     }
     
     func reloadTable() {
@@ -51,13 +54,7 @@ class ReposViewController: UIViewController {
             }
         }
     }
-
-
-    
-    
-    
-    
-    
+ 
 }
 
 extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
@@ -75,7 +72,7 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 128
     }
     
     
