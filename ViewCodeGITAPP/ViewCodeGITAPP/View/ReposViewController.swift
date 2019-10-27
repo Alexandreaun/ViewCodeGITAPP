@@ -12,6 +12,8 @@ class ReposViewController: UIViewController {
 
     let reposdataprovider = ReposDataProvider()
     let cellIdentifier = "cellIdentifier"
+    let refreshControl = UIRefreshControl()
+
     
     let tableview: UITableView = {
         let tv = UITableView(frame: .zero)
@@ -19,8 +21,6 @@ class ReposViewController: UIViewController {
         return tv
         
     }()
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +37,23 @@ class ReposViewController: UIViewController {
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         tableview.register(ReposTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        tableview.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        
+
         reloadTable()
 
-        
     }
     
     func navTitle(){
         navigationItem.title = "Repos Git"
 
+    }
+    
+   @objc func pullToRefresh(){
+        reposdataprovider.page = 1
+        reloadTable()
     }
     
     func reloadTable() {
@@ -75,14 +84,15 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
         return 128
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == (reposdataprovider.page * 10){
+            
+            reposdataprovider.page += 1
+            reloadTable()
+            
+        }
+    }
+
 }
 

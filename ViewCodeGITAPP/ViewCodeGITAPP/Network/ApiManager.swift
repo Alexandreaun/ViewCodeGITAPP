@@ -11,9 +11,11 @@ import Alamofire
 
 class ApiManager{
 
-func getAPI(completion: @escaping (Repos?, Bool) -> Void){
+    func getAPI(page: Int, completion: @escaping (Repos?, Bool) -> Void){
     
-let stringUrl: String = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
+    let param = "&page=\(page)"
+    
+let stringUrl: String = "https://api.github.com/search/repositories?q=language:swift&sort=stars\(param)"
     
     Alamofire.request(stringUrl, method: .get).responseJSON { (response) in
         

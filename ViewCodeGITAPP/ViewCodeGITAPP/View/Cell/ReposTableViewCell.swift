@@ -11,7 +11,6 @@ import UIKit
 class ReposTableViewCell: UITableViewCell {
     
     let imgview: UIImageView = {
-        //let image = UIImage(named: "te")
         let imv = UIImageView()
        // imv.contentMode = .AspectFill
         imv.layer.cornerRadius = 55
@@ -87,7 +86,7 @@ class ReposTableViewCell: UITableViewCell {
         imgview.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         imgview.leftAnchor.constraint(equalTo: leftAnchor, constant: 12).isActive = true
         imgview.heightAnchor.constraint(equalToConstant: 115).isActive = true
-        imgview.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        imgview.widthAnchor.constraint(equalToConstant: 115).isActive = true
         
         starImage.topAnchor.constraint(equalTo: labelRepo.bottomAnchor, constant: 10).isActive = true
         starImage.leftAnchor.constraint(equalTo: imgview.rightAnchor, constant: 10).isActive = true

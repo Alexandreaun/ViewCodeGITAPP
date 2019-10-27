@@ -24,7 +24,8 @@ struct Items: Codable {
     let stargazersCount: Int
     let language: String
     let forksCount: Int
-    
+    let watchers: Int
+
 }
 
 struct Owner: Codable {
@@ -33,3 +34,4 @@ struct Owner: Codable {
     let avatarUrl: String
     
 }
+
