@@ -15,6 +15,7 @@
 		AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3B236278F400AA14D1 /* Repos.swift */; };
 		AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */; };
 		AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */; };
+		ACE6750F236601A800BFFB43 /* DetailReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6750E236601A800BFFB43 /* DetailReposViewController.swift */; };
 		ACF9316C2364DBD200D2668B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF9316B2364DBD200D2668B /* UIImageExtension.swift */; };
 		EABA2AD5B5ACD2DB66A3B764 /* Pods_ViewCodeGITAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48890E7FE78DF09D5E14ACE6 /* Pods_ViewCodeGITAPP.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		AC0CEB3B236278F400AA14D1 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDataProvider.swift; sourceTree = "<group>"; };
 		AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		ACE6750E236601A800BFFB43 /* DetailReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReposViewController.swift; sourceTree = "<group>"; };
 		ACF9316B2364DBD200D2668B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E470A3C4A46B72D66340E937 /* Pods-ViewCodeGITAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeGITAPP.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeGITAPP/Pods-ViewCodeGITAPP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +95,9 @@
 		AC0CEB352362753900AA14D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC0CEB3F2362871F00AA14D1 /* Cell */,
 				AC0CEB252362737B00AA14D1 /* ReposViewController.swift */,
+				ACE6750E236601A800BFFB43 /* DetailReposViewController.swift */,
+				AC0CEB3F2362871F00AA14D1 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				ACF9316C2364DBD200D2668B /* UIImageExtension.swift in Sources */,
 				AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */,
 				AC0CEB242362737B00AA14D1 /* AppDelegate.swift in Sources */,
+				ACE6750F236601A800BFFB43 /* DetailReposViewController.swift in Sources */,
 				AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */,
 				AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */,
 			);

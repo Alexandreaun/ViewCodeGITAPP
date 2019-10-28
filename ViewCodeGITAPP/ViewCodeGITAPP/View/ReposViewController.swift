@@ -76,6 +76,7 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReposTableViewCell else {return UITableViewCell()}
         cell.setupCell(item: reposdataprovider.arrayRepos[indexPath.row])
+
         return cell
         
     }
@@ -93,6 +94,17 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
             
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        navigationController?.pushViewController(DetailReposViewController(object: reposdataprovider.arrayRepos[indexPath.row]), animated: true)
+        
+        
+    }
+    
+    
+    
+    
 
 }
 

@@ -29,6 +29,7 @@ class ReposTableViewCell: UITableViewCell {
         lb.textAlignment = .left
         lb.numberOfLines = 0
         lb.translatesAutoresizingMaskIntoConstraints = false
+
         return lb
     }()
     
@@ -62,6 +63,7 @@ class ReposTableViewCell: UITableViewCell {
     
         override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
+            
             
             addSubview(labelName)
             addSubview(imgview)
