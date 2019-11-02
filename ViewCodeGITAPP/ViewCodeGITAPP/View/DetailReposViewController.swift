@@ -10,16 +10,8 @@ import UIKit
 
 class DetailReposViewController: UIViewController {
 
-    let imageview: UIImageView = {
-        let img = UIImageView()
-        img.layer.cornerRadius = 55
-        img.layer.masksToBounds = true
-        img.clipsToBounds = true
-        img.layer.borderWidth = 5
-        img.layer.borderColor = UIColor.gray.cgColor
-        img.translatesAutoresizingMaskIntoConstraints = false
-        return img
-    }()
+    let identifier = "cellIdentifier"
+    let reposlistDataProvider = ReposListDataProvider()
     
     let labelDescription: UILabel = {
         let lb = UILabel(frame: .zero)
@@ -32,44 +24,68 @@ class DetailReposViewController: UIViewController {
         
     }()
     
-//    let view: UIView = {
-//        let vw = UIView()
-//
-//        return vw
-//    }()
+    let tableview: UITableView = {
+        let tbw = UITableView(frame: .zero)
+        tbw.translatesAutoresizingMaskIntoConstraints = false
+        return tbw
+    }()
     
-    var object: Items?
     
+    let vview: UIView = {
+        
+        let vw = UIView()
+        vw.translatesAutoresizingMaskIntoConstraints = false
+        return vw
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        view.addSubview(imageview)
-        view.addSubview(labelDescription)
+
+        view.addSubview(tableview)
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
         
-        setImageConstrains()
-        setLabelsConstrains()
         
-        loadInformations()
+        setTableviewConstrains()
+        
+        tableview.register(ReposListTableViewCell.self, forCellReuseIdentifier: identifier)
+
+        sendObject()
+        reloadData()
+        navTitle()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        sendObject()
 
     }
     
-    func setImageConstrains(){
+    func reloadData(){
+        reposlistDataProvider.loadReposList { (success) in
+            if success{
+                self.tableview.reloadData()
+            }
+        }
         
-        imageview.topAnchor.constraint(equalTo: view.topAnchor, constant: 75).isActive = true
-        imageview.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
-        imageview.heightAnchor.constraint(equalToConstant: 115).isActive = true
-        imageview.widthAnchor.constraint(equalToConstant: 115).isActive = true
     }
     
-    func setLabelsConstrains(){
+    func navTitle(){
+        navigationItem.title = "Repos List"
         
-        labelDescription.topAnchor.constraint(equalTo: imageview.bottomAnchor, constant: 20).isActive = true
-        labelDescription.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        labelDescription.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 20).isActive = true
-
     }
+    
+    func setTableviewConstrains(){
+        
+        tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableview.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableview.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    var object: Items?
     
     convenience init(object: Items) {
         self.init()
@@ -77,14 +93,57 @@ class DetailReposViewController: UIViewController {
         
     }
     
-    func loadInformations(){
-        guard let obj = object else {return}
+    func sendObject(){
         
-        imageview.loadSDWebImage(imageView: imageview, string: obj.owner.avatarUrl)
-        labelDescription.text = obj.description
+        guard let obj = object else {return}
+        reposlistDataProvider.login = obj.owner.login
+        reloadData()
         
     }
     
+    
+    
+//    func loadInformations(){
+//        guard let obj = object else {return}
+//
+//        imageview.loadSDWebImage(imageView: imageview, string: obj.owner.avatarUrl)
+//        labelDescription.text = obj.description
+//
+//    }
+    
+}
 
 
+extension DetailReposViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return 5
+        return reposlistDataProvider.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ReposListTableViewCell else {return UITableViewCell()}
+    
+        if indexPath.row == 0{
+            cell.setupCellImg(repoList: reposlistDataProvider.arrayReposListUser[indexPath.row])
+        }else{
+            
+            cell.setupCell(repoList: reposlistDataProvider.arrayReposListUser[indexPath.row])
+            
+        }
+        
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    
+    
+    
+    
+    
+    
 }

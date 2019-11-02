@@ -13,7 +13,7 @@ class ReposViewController: UIViewController {
     let reposdataprovider = ReposDataProvider()
     let cellIdentifier = "cellIdentifier"
     let refreshControl = UIRefreshControl()
-
+    var object: Items? = nil
     
     let tableview: UITableView = {
         let tv = UITableView(frame: .zero)
@@ -47,7 +47,7 @@ class ReposViewController: UIViewController {
     }
     
     func navTitle(){
-        navigationItem.title = "Repos Git"
+        navigationItem.title = "List Users"
 
     }
     
@@ -74,9 +74,12 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReposTableViewCell else {return UITableViewCell()}
         cell.setupCell(item: reposdataprovider.arrayRepos[indexPath.row])
-
+        
+       // object = reposdataprovider.arrayRepos[indexPath.row]
+     
         return cell
         
     }
@@ -97,14 +100,12 @@ extension ReposViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        navigationController?.pushViewController(DetailReposViewController(object: reposdataprovider.arrayRepos[indexPath.row]), animated: true)
+     //   guard let obj = object else {return}
         
+        navigationController?.pushViewController(DetailReposViewController(object: reposdataprovider.arrayRepos[indexPath.row] ), animated: true)
         
     }
     
     
-    
-    
 
 }
-
