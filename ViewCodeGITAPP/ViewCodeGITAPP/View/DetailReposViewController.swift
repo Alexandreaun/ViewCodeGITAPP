@@ -52,6 +52,9 @@ class DetailReposViewController: UIViewController {
         
         tableview.register(ReposListTableViewCell.self, forCellReuseIdentifier: identifier)
 
+        tableview.tableFooterView = UIView()
+
+        
         sendObject()
         reloadData()
         navTitle()
@@ -123,13 +126,11 @@ extension DetailReposViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ReposListTableViewCell else {return UITableViewCell()}
     
-        if indexPath.row == 0{
-            cell.setupCellImg(repoList: reposlistDataProvider.arrayReposListUser[indexPath.row])
-        }else{
+
             
             cell.setupCell(repoList: reposlistDataProvider.arrayReposListUser[indexPath.row])
             
-        }
+        
         
         
         return cell

@@ -14,6 +14,9 @@ struct ReposList: Codable {
     let fullName: String
     let owner: Owner
     let description: String
+    let createdAt: String
+    let updatedAt: String
     let stargazersCount: Int
+    let language: String
     let forksCount: Int
 }

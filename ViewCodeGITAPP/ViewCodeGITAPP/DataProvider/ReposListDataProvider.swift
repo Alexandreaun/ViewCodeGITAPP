@@ -10,7 +10,7 @@ import Foundation
 
 class ReposListDataProvider{
     
-    let api = ApiManagerRL()
+    let api = ApiManager()
     var arrayReposListUser: [ReposList] = []
     var login: String?
 
@@ -23,6 +23,7 @@ class ReposListDataProvider{
                 guard let repoList = reposList else {return}
                 self.arrayReposListUser = repoList
                 completion(true)
+                print("Repositório carregou tranquilo")
                 return
             }else{
                 

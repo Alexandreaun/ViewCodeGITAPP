@@ -15,6 +15,8 @@
 		AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3B236278F400AA14D1 /* Repos.swift */; };
 		AC0CEB3E2362845500AA14D1 /* ReposDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */; };
 		AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */; };
+		AC0EC3C62372734800FF1460 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0EC3C52372734800FF1460 /* ValidationError.swift */; };
+		AC0EC3C8237275DA00FF1460 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0EC3C7237275DA00FF1460 /* UIViewControllerExtension.swift */; };
 		ACE44DC82367C5A400E6D3E7 /* ReposList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE44DC72367C5A400E6D3E7 /* ReposList.swift */; };
 		ACE6750F236601A800BFFB43 /* DetailReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6750E236601A800BFFB43 /* DetailReposViewController.swift */; };
 		ACE84DDE236E097900829A44 /* ApiManagerRL.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE84DDD236E097900829A44 /* ApiManagerRL.swift */; };
@@ -37,6 +39,8 @@
 		AC0CEB3B236278F400AA14D1 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		AC0CEB3D2362845500AA14D1 /* ReposDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDataProvider.swift; sourceTree = "<group>"; };
 		AC0CEB402362875A00AA14D1 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		AC0EC3C52372734800FF1460 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		AC0EC3C7237275DA00FF1460 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		ACE44DC72367C5A400E6D3E7 /* ReposList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposList.swift; sourceTree = "<group>"; };
 		ACE6750E236601A800BFFB43 /* DetailReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReposViewController.swift; sourceTree = "<group>"; };
 		ACE84DDD236E097900829A44 /* ApiManagerRL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerRL.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			children = (
 				AC0CEB3B236278F400AA14D1 /* Repos.swift */,
 				ACE44DC72367C5A400E6D3E7 /* ReposList.swift */,
+				AC0EC3C52372734800FF1460 /* ValidationError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				ACF9316B2364DBD200D2668B /* UIImageExtension.swift */,
+				AC0EC3C7237275DA00FF1460 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 				ACE44DC82367C5A400E6D3E7 /* ReposList.swift in Sources */,
 				AC0CEB262362737B00AA14D1 /* ReposViewController.swift in Sources */,
 				AC0CEB3A2362759300AA14D1 /* ApiManager.swift in Sources */,
+				AC0EC3C62372734800FF1460 /* ValidationError.swift in Sources */,
 				ACE86593236A490E004E0F5B /* ReposListTableViewCell.swift in Sources */,
 				ACF9316C2364DBD200D2668B /* UIImageExtension.swift in Sources */,
 				ACE86591236A40BF004E0F5B /* ReposListDataProvider.swift in Sources */,
@@ -288,6 +295,7 @@
 				ACE84DDE236E097900829A44 /* ApiManagerRL.swift in Sources */,
 				ACE6750F236601A800BFFB43 /* DetailReposViewController.swift in Sources */,
 				AC0CEB3C236278F400AA14D1 /* Repos.swift in Sources */,
+				AC0EC3C8237275DA00FF1460 /* UIViewControllerExtension.swift in Sources */,
 				AC0CEB412362875A00AA14D1 /* ReposTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
