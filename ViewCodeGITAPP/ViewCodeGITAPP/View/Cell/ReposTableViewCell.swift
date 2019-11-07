@@ -12,7 +12,7 @@ class ReposTableViewCell: UITableViewCell {
     
     let imgview: UIImageView = {
         let imv = UIImageView()
-       // imv.contentMode = .AspectFill
+        //imv.contentMode = .AspectFill
         imv.layer.cornerRadius = 55
         imv.layer.masksToBounds = true
         imv.clipsToBounds = true

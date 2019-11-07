@@ -13,10 +13,10 @@ struct ReposList: Codable {
     let name: String
     let fullName: String
     let owner: Owner
-    let description: String
+    let description: String?
     let createdAt: String
     let updatedAt: String
-    let stargazersCount: Int
-    let language: String
-    let forksCount: Int
+    let stargazersCount: Int?
+    let language: String?
+    let forksCount: Int?
 }

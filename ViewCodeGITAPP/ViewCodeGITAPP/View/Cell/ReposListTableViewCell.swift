@@ -12,7 +12,7 @@ class ReposListTableViewCell: UITableViewCell {
 
     let imgview: UIImageView = {
         let imv = UIImageView()
-        // imv.contentMode = .AspectFill
+        imv.contentMode = .scaleAspectFill
         imv.layer.cornerRadius = 35
         imv.layer.masksToBounds = true
         imv.clipsToBounds = true
@@ -53,8 +53,15 @@ class ReposListTableViewCell: UITableViewCell {
         return lb
     }()
     
-    
-    
+    let labelDate: UILabel = {
+        let lb = UILabel(frame: .zero)
+        lb.textColor = .gray
+        lb.font = UIFont.systemFont(ofSize: 12)
+        lb.textAlignment = .center
+        lb.numberOfLines = 0
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        return lb
+    }()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -64,6 +71,7 @@ class ReposListTableViewCell: UITableViewCell {
         addSubview(labelDescription)
         addSubview(imgview)
         addSubview(labelLanguage)
+        addSubview(labelDate)
         setconstrainsLabel()
         setConstrainsImage()
         
@@ -95,6 +103,11 @@ class ReposListTableViewCell: UITableViewCell {
       //  labelLanguage.bottomAnchor.constraint(equalTo: imgview.topAnchor, constant: -2).isActive = true
         labelLanguage.widthAnchor.constraint(equalToConstant: 60).isActive = true
         
+        labelDate.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 6).isActive = true
+        labelDate.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
+        labelDate.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        
         labelLanguage.text = "Language:"
     }
     
@@ -112,6 +125,7 @@ class ReposListTableViewCell: UITableViewCell {
         
         labelNameRepo.text = repoList.name
         labelDescription.text = repoList.description
+        labelDate.text = repoList.createdAt
       //  imgview.loadSDWebImage(imageView: imgview, string: repoList.owner.avatarUrl)
 
         if repoList.language == "Swift"{
@@ -144,10 +158,6 @@ class ReposListTableViewCell: UITableViewCell {
     }
     
  
-    
-    
-    
-    
     
 
 }
