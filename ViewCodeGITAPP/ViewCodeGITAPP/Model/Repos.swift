@@ -32,6 +32,7 @@ struct Owner: Codable {
     let login: String
     let id: Int
     let avatarUrl: String
+    let reposUrl: String
     
 }
 
