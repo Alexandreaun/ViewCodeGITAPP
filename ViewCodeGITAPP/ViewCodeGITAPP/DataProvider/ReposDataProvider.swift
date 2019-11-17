@@ -12,18 +12,19 @@ class ReposDataProvider{
     
     let apiManager = ApiManager()
     
-    var arrayRepos: [Itens] = []
+    var arrayRepos: [Items] = []
+    var page = 1
     
-    func getRepos(completion: @escaping (Error?) -> Void){
+    func getRepos(completion: @escaping (Bool) -> Void){
         
-        apiManager.getAPI { (repos, error) in
-            if error == nil{
+        apiManager.getAPI(page: page) { (repos, success) in
+            if success{
                 guard let repo = repos else {return}
-                self.arrayRepos = repo.items
-                completion(nil)
+                self.arrayRepos.append(contentsOf: repo.items)
+                completion(true)
                 return
             }else{
-                completion(NSError())
+                completion(false)
                 return
             }
         }

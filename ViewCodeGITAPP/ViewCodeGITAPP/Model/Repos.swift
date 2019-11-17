@@ -10,25 +10,29 @@ import Foundation
 
 
 struct Repos: Codable {
-    let total_count: Int
-    let items: [Itens]
+    let totalCount: Int
+    let items: [Items]
 }
 
-struct Itens: Codable {
+struct Items: Codable {
     let id: Int
     let name: String
-    let full_name: String
+    let fullName: String
     let owner: Owner
     let description: String
     let fork: Bool
-    let stargazers_count: Int
+    let stargazersCount: Int
     let language: String
-    let forks_count: Int
-    
+    let forksCount: Int
+    let watchers: Int
+
 }
 
 struct Owner: Codable {
     let login: String
-    let avatar_url: String
+    let id: Int
+    let avatarUrl: String
+    let reposUrl: String
     
 }
+

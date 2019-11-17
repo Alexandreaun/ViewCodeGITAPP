@@ -8,5 +8,6 @@ target 'ViewCodeGITAPP' do
   # Pods for ViewCodeGITAPP
 
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end

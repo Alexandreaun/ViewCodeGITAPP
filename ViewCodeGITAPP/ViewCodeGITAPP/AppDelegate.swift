@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         let nvc = UINavigationController.init(rootViewController: ReposViewController())
+       // nvc.navigationBar.prefersLargeTitles = true
         window?.rootViewController = nvc
         
         return true
