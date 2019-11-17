@@ -35,8 +35,9 @@ class ReposListTableViewCell: UITableViewCell {
     
     let labelNameRepo: UILabel = {
         let lb = UILabel(frame: .zero)
-        lb.textColor = .gray
-        lb.font = UIFont.systemFont(ofSize: 16)
+        lb.textColor = .black
+        //lb.font = UIFont.systemFont(ofSize: 16)
+        lb.font = UIFont.boldSystemFont(ofSize: 16)
         lb.textAlignment = .left
         lb.numberOfLines = 0
         lb.translatesAutoresizingMaskIntoConstraints = false
@@ -46,8 +47,8 @@ class ReposListTableViewCell: UITableViewCell {
     let labelLanguage: UILabel = {
         let lb = UILabel(frame: .zero)
         lb.textColor = .gray
-        lb.font = UIFont.systemFont(ofSize: 12)
-        lb.textAlignment = .center
+        lb.font = UIFont.systemFont(ofSize: 10)
+        lb.textAlignment = .left
         lb.numberOfLines = 0
         lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
@@ -57,7 +58,7 @@ class ReposListTableViewCell: UITableViewCell {
         let lb = UILabel(frame: .zero)
         lb.textColor = .gray
         lb.font = UIFont.systemFont(ofSize: 12)
-        lb.textAlignment = .center
+        lb.textAlignment = .left
         lb.numberOfLines = 0
         lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
@@ -97,35 +98,38 @@ class ReposListTableViewCell: UITableViewCell {
         labelDescription.topAnchor.constraint(equalTo: labelNameRepo.bottomAnchor, constant: 10).isActive = true
         labelDescription.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
         labelDescription.rightAnchor.constraint(equalTo: imgview.leftAnchor, constant: -9).isActive = true
+        labelDescription.bottomAnchor.constraint(equalTo: labelDate.topAnchor, constant: -5).isActive = true
         
         labelLanguage.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         labelLanguage.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
       //  labelLanguage.bottomAnchor.constraint(equalTo: imgview.topAnchor, constant: -2).isActive = true
-        labelLanguage.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        labelLanguage.widthAnchor.constraint(equalToConstant: 57).isActive = true
         
-        labelDate.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 6).isActive = true
+       // labelDate.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 6).isActive = true
         labelDate.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
         labelDate.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        labelDate.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5).isActive = true
         
-        
-        labelLanguage.text = "Language:"
+        labelLanguage.text = "Linguagem:"
     }
     
     func setConstrainsImage(){
         
-        imgview.topAnchor.constraint(equalTo: labelLanguage.bottomAnchor, constant: 12).isActive = true
+        imgview.topAnchor.constraint(equalTo: labelLanguage.bottomAnchor, constant: max(-5, -5, 12, 0)).isActive = true
         imgview.rightAnchor.constraint(equalTo: rightAnchor, constant: -5).isActive = true
         imgview.heightAnchor.constraint(equalToConstant: 70).isActive = true
         imgview.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        
+       // imgview.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -2).isActive = true
+        imgview.bottomAnchor.constraint(equalTo: bottomAnchor, constant: min(-5, -5, -5, 0)).isActive = true
+    
     }
     
     
     func setupCell(repoList: ReposList){
         
         labelNameRepo.text = repoList.name
-        labelDescription.text = repoList.description
-        labelDate.text = repoList.createdAt
+        labelDescription.text = "Descrição: \(repoList.description ?? "")"
+        labelDate.text = "Criação: \(repoList.createdAt)"
       //  imgview.loadSDWebImage(imageView: imgview, string: repoList.owner.avatarUrl)
 
         if repoList.language == "Swift"{

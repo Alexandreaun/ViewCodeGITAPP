@@ -41,6 +41,7 @@ class ReposViewController: UIViewController {
         tableview.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         
+        tableview.showsVerticalScrollIndicator = false
 
         reloadTable()
 

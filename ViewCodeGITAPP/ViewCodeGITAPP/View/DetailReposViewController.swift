@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailReposViewController: UIViewController {
-
+    
     let identifier = "cellIdentifier"
     let reposlistDataProvider = ReposListDataProvider()
     
@@ -42,7 +42,7 @@ class DetailReposViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-
+        
         view.addSubview(tableview)
         self.tableview.delegate = self
         self.tableview.dataSource = self
@@ -51,9 +51,10 @@ class DetailReposViewController: UIViewController {
         setTableviewConstrains()
         
         tableview.register(ReposListTableViewCell.self, forCellReuseIdentifier: identifier)
-
+        
         tableview.tableFooterView = UIView()
-
+        
+        tableview.showsVerticalScrollIndicator = false
         
         sendObject()
         reloadData()
@@ -63,7 +64,7 @@ class DetailReposViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         sendObject()
-
+        
     }
     
     func reloadData(){
@@ -72,11 +73,6 @@ class DetailReposViewController: UIViewController {
                 self.tableview.reloadData()
             }
         }
-        
-    }
-    
-    func navTitle(){
-        navigationItem.title = "Repos List"
         
     }
     
@@ -104,15 +100,12 @@ class DetailReposViewController: UIViewController {
         
     }
     
-    
-    
-//    func loadInformations(){
-//        guard let obj = object else {return}
-//
-//        imageview.loadSDWebImage(imageView: imageview, string: obj.owner.avatarUrl)
-//        labelDescription.text = obj.description
-//
-//    }
+    func navTitle(){
+        guard let obj = object else {return}
+        navigationItem.title = "Repositórios de: \(obj.owner.login)"
+        
+    }
+
     
 }
 
@@ -125,25 +118,16 @@ extension DetailReposViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ReposListTableViewCell else {return UITableViewCell()}
-    
-
-            
-            cell.setupCell(repoList: reposlistDataProvider.arrayReposListUser[indexPath.row])
-            
         
-        
+        cell.setupCell(repoList: reposlistDataProvider.arrayReposListUser[indexPath.row])
         
         return cell
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
-    
-    
-    
-    
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 120
+    //    }
     
     
     
